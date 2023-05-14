@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://desfrene.fr/</loc>
+        <lastmod>2023-10-05</lastmod>
+    </url>
+    <url>
+        <loc>https://desfrene.fr/en/</loc>
+        <lastmod>2023-10-05</lastmod>
+    </url>
+    <url>
+        <loc>https://desfrene.fr/personal.html</loc>
+        <lastmod>2023-10-05</lastmod>
+    </url>
+    <url>
+        <loc>https://desfrene.fr/en/personal.html</loc>
+        <lastmod>2023-10-05</lastmod>
+    </url>
+    <url>
+        <loc>https://desfrene.fr/resources.html</loc>
+        <lastmod>2023-13-05</lastmod>
+    </url>
+    <url>
+        <loc>https://desfrene.fr/en/resources.html</loc>
+        <lastmod>2023-13-05</lastmod>
+    </url>
+</urlset>

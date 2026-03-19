@@ -1,3 +1,83 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@source "./src";
+
+body {
+    @apply bg-white text-black fill-zinc-800;
+    @apply dark:bg-zinc-900 dark:text-zinc-100 dark:fill-zinc-200;
+
+    @apply transition-colors duration-300;
+
+    @apply h-screen flex flex-col p-6;
+}
+
+/* Main Layout */
+.title {
+    @apply flex-none text-center text-4xl font-bold;
+}
+
+main {
+    @apply flex-auto;
+}
+
+footer {
+    @apply flex-none text-justify hover:underline;
+}
+
+/* Category Layout */
+
+.cat {
+    @apply flex flex-col;
+}
+
+.cat-title {
+    @apply flex-none pt-4 pb-1 text-justify text-2xl font-bold;
+}
+
+.cat-body {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center;
+
+    @apply lg:flex lg:flex-row lg:flex-wrap lg:justify-start;
+}
+
+/* Service Layout */
+
+.service-body {
+    @apply flex flex-col rounded-3xl p-4 items-center justify-center;
+
+    @apply h-auto min-h-24 lg:w-48;
+
+    @apply hover:bg-zinc-200 active:bg-zinc-300;
+
+    @variant dark {
+        @apply hover:bg-zinc-800 active:bg-zinc-700;
+    }
+
+    @variant hover {
+        .service-name {
+            @apply underline;
+        }
+    }
+
+    @variant active {
+        .service-name {
+            @apply underline;
+        }
+    }
+}
+
+.service-icon {
+    @apply flex-none min-h-12 min-w-12 fill-current;
+}
+
+.service-details {
+    @apply flex-auto pt-3 text-center w-full;
+}
+
+.service-name {
+    @apply text-sm font-semibold break-words;
+}
+
+.service-url {
+    @apply text-xs text-zinc-500 dark:text-gray-400 break-words mt-1;
+}

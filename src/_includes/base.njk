@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ lang | default('fr') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <meta name="author" content="{{ author }}" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{{ title }}</title>
+
+    <meta name="description" content="{{ metadata }}" />
+
+    <link rel="canonical" href="https://desfrene.fr/" />
+    <link rel="alternate" hreflang="fr" href="https://desfrene.fr/" />
+    <link rel="alternate" hreflang="en" href="https://desfrene.fr/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://desfrene.fr/en/" />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <h1 class="title">Desfrene Portail</h1>
+
+    <main>
+      {% for cat in categories %}
+      <div class="cat">
+        <h2 class="cat-title">{{ cat.name }}</h2>
+        <div class="cat-body">
+          {% for service in cat.links %}
+          <a href="{{ service.url }}" class="service-body">
+            <div class="service-icon">{% include service.icon %}</div>
+            <div class="service-details">
+              <p class="service-name">{{ service.name }}</p>
+              <p class="service-url">
+                {{ service.display | default(service.url | cleanUrl) }}
+              </p>
+            </div>
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </main>
+
+    <footer>
+      <a href="{{ altLink }}">{{ altLang }}</a>
+    </footer>
+  </body>
+</html>
